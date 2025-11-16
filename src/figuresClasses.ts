@@ -11,22 +11,13 @@ export class Triangle implements Figure {
 
   color: 'red' | 'green' | 'blue';
 
-  private a: number;
-
-  private b: number;
-
-  private c: number;
-
   constructor(
     color: 'red' | 'green' | 'blue',
-    a: number,
-    b: number,
-    c: number,
+    private a: number,
+    private b: number,
+    private c: number,
   ) {
     this.color = color;
-    this.a = a;
-    this.b = b;
-    this.c = c;
 
     if (a <= 0 || b <= 0 || c <= 0) {
       throw new Error('Side lengths must be positive');
@@ -52,11 +43,11 @@ export class Circle implements Figure {
 
   color: 'red' | 'green' | 'blue';
 
-  private radius: number;
-
-  constructor(color: 'red' | 'green' | 'blue', radius: number) {
+  constructor(
+    color: 'red' | 'green' | 'blue',
+    private radius: number,
+  ) {
     this.color = color;
-    this.radius = radius;
 
     if (radius <= 0) {
       throw new Error('Radius must be positive');
@@ -75,14 +66,12 @@ export class Rectangle implements Figure {
 
   color: 'red' | 'green' | 'blue';
 
-  private width: number;
-
-  private height: number;
-
-  constructor(color: 'red' | 'green' | 'blue', width: number, height: number) {
+  constructor(
+    color: 'red' | 'green' | 'blue',
+    private width: number,
+    private height: number,
+  ) {
     this.color = color;
-    this.width = width;
-    this.height = height;
 
     if (width <= 0 || height <= 0) {
       throw new Error('Width and height must be positive');
