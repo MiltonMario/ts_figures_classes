@@ -9,10 +9,8 @@ export interface Figure {
 export class Triangle implements Figure {
   shape: 'triangle' = 'triangle';
 
-  color: 'red' | 'green' | 'blue';
-
   constructor(
-    color: 'red' | 'green' | 'blue',
+    public color: 'red' | 'green' | 'blue',
     private a: number,
     private b: number,
     private c: number,
@@ -41,10 +39,8 @@ export class Triangle implements Figure {
 export class Circle implements Figure {
   shape: 'circle' = 'circle';
 
-  color: 'red' | 'green' | 'blue';
-
   constructor(
-    color: 'red' | 'green' | 'blue',
+    public color: 'red' | 'green' | 'blue',
     private radius: number,
   ) {
     this.color = color;
@@ -64,10 +60,8 @@ export class Circle implements Figure {
 export class Rectangle implements Figure {
   shape: 'rectangle' = 'rectangle';
 
-  color: 'red' | 'green' | 'blue';
-
   constructor(
-    color: 'red' | 'green' | 'blue',
+    public color: 'red' | 'green' | 'blue',
     private width: number,
     private height: number,
   ) {
